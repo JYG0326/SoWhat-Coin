@@ -1,0 +1,56 @@
+/*----------==========헤더==========----------*/
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    float: left;
+    list-style: none;
+}
+header{
+    position: fixed;
+    width:100%;
+    height: 10vh;
+    border-bottom: 1px #a5a1a1 solid;
+    font-size: 20px;
+    font-weight: bolder;
+}
+/*네비게이션 분할*/
+.H_nav{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-items: center;
+    color: rgb(50, 50, 50);
+    background-color: white;
+}
+/*로고 인터페이스*/
+.logo_interface{
+    width:100%;
+    height: 100%;
+}
+.logo_interface>img{
+    width:50%;
+    padding: 1vh 25% 0% 25%;
+}
+/*페이지링크 인터페이스*/
+.function_interface{
+    width: 50%;
+    padding: 3vh 25% calc(2vh - 1px) 25%;
+}
+.function_interface>li{
+    width:33.333%;
+    text-align: center;
+}
+/*로그인 인터페이스*/
+.login_interface{
+    width: 70%;
+    padding: 3.5vh 25% calc(1.5vh - 1px) 25%;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.login_interface>li{
+    width:50%;
+    text-align: center;
+}

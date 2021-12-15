@@ -1,4 +1,4 @@
-import './App.css';
+import './Header.css';
 
 function Header() {
   return (
@@ -15,7 +15,6 @@ function Header() {
           <li>회원가입</li>
         </ul>
       </nav>
-
     </header>
   );
 }

@@ -1,0 +1,55 @@
+/*----------==========메인==========----------*/
+*{
+    margin:0;
+    padding:0;
+}
+main{
+    height: calc(80vh - 2px);
+    padding-top: 10vh;
+    text-align: center;
+}
+main>img{
+    width:100%;
+}
+main>.textbox{
+    width: 60%;
+    position: absolute;
+    top:25%;
+    left:20%;
+    word-spacing: -2.5px;
+}
+.nowcoins{
+    width:30%;
+    position: absolute;
+    top:42.5%;
+    left:35%;
+}
+.nowcoins>p{
+    font-size: 18px;
+}
+.nowcoins>h1{
+    font-size: 50px;
+    color: #093687;
+}
+.bold{
+    font-weight: bold;
+}
+button{
+    width:150px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    background-color: #0062DF;
+    border: 0px;
+}
+.M_btn1{
+    position:absolute;
+    top:65%;
+    left:40%;
+}
+.M_btn2{
+    position:absolute;
+    top:65%;
+    right:40%;
+}
