@@ -1,0 +1,20 @@
+.Modal_login{
+    position: fixed;
+    width:30%;
+    height:70%;
+    top:15%;
+    left:35%;
+    background-color: white;
+    border:1px solid;
+    text-align: center;
+}
+.Modal_login > img{
+    width:30%;
+    margin: 5% 35% 5% 35%;
+}
+.Modal_login > h4{
+    position: absolute;
+    width:30%;
+    top:15%;
+    left:35%;
+}
