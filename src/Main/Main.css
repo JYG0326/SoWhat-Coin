@@ -34,7 +34,7 @@ main>.textbox{
 .bold{
     font-weight: bold;
 }
-button{
+.btn{
     width:150px;
     height: 50px;
     font-size: 16px;
