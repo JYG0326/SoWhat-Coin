@@ -1,9 +1,14 @@
+import { useState } from "react";
 import './Main.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Login from "../Modal/Login/Login";
 
 function Main() {
-
+  const [loginShowing, setLoginShowing] = useState(false);
+  const openLogin = () => {
+    setLoginShowing(true);
+  };
   return (
     <div className="App">
       <Header />
@@ -18,8 +23,9 @@ function Main() {
           <h1>0</h1>
           <p>Coins</p>
         </div>
-        <button className='M_btn1'>거래소 둘러보기</button>
-        <button className='M_btn2'>로그인</button>
+        <button className='btn M_btn1'>거래소 둘러보기</button>
+        <button className='btn M_btn2' onClick={openLogin} >로그인</button>
+        <div>{loginShowing && <Login />}</div>
       </main>
       <Footer />
     </div>
