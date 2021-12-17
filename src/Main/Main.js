@@ -9,6 +9,9 @@ function Main() {
   const openLogin = () => {
     setLoginShowing(true);
   };
+  const closeLogin=() => {
+    setLoginShowing(false);
+  };
   return (
     <div className="App">
       <Header />
@@ -25,7 +28,8 @@ function Main() {
         </div>
         <button className='btn M_btn1'>거래소 둘러보기</button>
         <button className='btn M_btn2' onClick={openLogin} >로그인</button>
-        <div>{loginShowing && <Login />}</div>
+        {loginShowing && <Login />}
+        {loginShowing && <Login closeLogin={closeLogin} />}
       </main>
       <Footer />
     </div>

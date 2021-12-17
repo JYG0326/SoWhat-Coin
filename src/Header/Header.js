@@ -8,9 +8,15 @@ function Header() {
   const openLogin = () => {
     setLoginShowing(true);
   };
+  const closeLogin=() => {
+    setLoginShowing(false);
+  };
   const [registerShowing, setRegisterShowing] = useState(false);
   const openRegister = () => {
     setRegisterShowing(true);
+  };
+  const closeRegister=() => {
+    setRegisterShowing(false);
   };
   return (
     <header>
@@ -26,8 +32,10 @@ function Header() {
           <button><li onClick={openRegister}>회원가입</li></button>
         </ul>
       </nav>
-      <div>{loginShowing && <Login />}</div>
-      <div>{registerShowing && <Register />}</div>
+      {loginShowing && <Login />}
+      {loginShowing && <Login closeLogin={closeLogin} />}
+      {registerShowing && <Register />}
+      {registerShowing && <Register closeRegister={closeRegister} />}
     </header>
     
   );
