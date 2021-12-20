@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import './Main.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -11,6 +12,9 @@ function Main() {
   };
   const closeLogin=() => {
     setLoginShowing(false);
+  };
+  const clickMe = () => {
+    window.location.href('/Exchange');
   };
   return (
     <div className="App">
@@ -26,7 +30,7 @@ function Main() {
           <h1>0</h1>
           <p>Coins</p>
         </div>
-        <button className='btn M_btn1'>거래소 둘러보기</button>
+        <button className='btn M_btn1' onClick={clickMe}>거래소 둘러보기</button>
         <button className='btn M_btn2' onClick={openLogin} >로그인</button>
         {loginShowing && <Login />}
         {loginShowing && <Login closeLogin={closeLogin} />}
