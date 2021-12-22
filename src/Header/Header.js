@@ -5,6 +5,9 @@ import Login from "../Modal/Login/Login";
 import Register from "../Modal/Register/Register";
 
 function Header() {
+    const moveMain = () => {
+    window.location.href = "/";
+  };
   const [loginShowing, setLoginShowing] = useState(false);
   const openLogin = () => {
     setLoginShowing(true);
@@ -22,7 +25,7 @@ function Header() {
   return (
     <header>
       <nav className='H_nav'>
-        <div className='logo_interface'><img alt='어쩔코인_로고' src="./logo.png" /></div>
+        <div className='logo_interface'><img alt='어쩔코인_로고' src="./logo.png" onClick={moveMain} /></div>
         <ul className='function_interface'>
           <li><Link to="/Exchange">거래소</Link></li>
           <li>투자내역</li>
