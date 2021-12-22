@@ -3,8 +3,11 @@
     margin:0;
     padding:0;
 }
+.App{
+    min-width: 1440px;
+}
 main{
-    height: calc(80vh - 2px);
+    min-height: calc(80vh - 2px);
     padding-top: 10vh;
     text-align: center;
 }
