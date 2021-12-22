@@ -12,13 +12,22 @@ function Exchange() {
 
           </div>
           <div className='askprice'>
-
+            <div className='listing_method'>
+              <button id="commonprice" className='method'>일반호가</button>
+              <button id="accumulateprice" className='method'>누적호가</button>
+            </div>
           </div>
           <div className='order'>
-
+            <div className='listing_method'>
+              <button id="buy" className='method'>매수</button>
+              <button id="sell" className='method'>매도</button>
+            </div>
           </div>
           <div className='coinlist_container'>
-            <div></div>
+            <div className='listing_method'>
+              <button id="yourcoin" className='method'>원화거래</button>
+              <button id="mycoin" className='method'>보유코인</button>
+            </div>
             <div className='coinlist'>
               <div className='list_header'>
                 <div className='coin_name'>
@@ -37,7 +46,7 @@ function Exchange() {
               <div className='coins'>
                 <div className='coin'>
                   <div className='coin_name'>
-                    <p>코인1</p>
+                    <p>비트코인</p>
                   </div>
                   <div className='coin_price'>
                     <p>100,000,000</p>
@@ -51,7 +60,7 @@ function Exchange() {
                 </div>
                 <div className='coin'>
                   <div className='coin_name'>
-                    <p>코인2</p>
+                    <p>이더리움</p>
                   </div>
                   <div className='coin_price'>
                     <p>200,000,000</p>
@@ -65,7 +74,7 @@ function Exchange() {
                 </div>
                 <div className='coin'>
                   <div className='coin_name'>
-                    <p>코인3</p>
+                    <p>샌드박스</p>
                   </div>
                   <div className='coin_price'>
                     <p>300,000,000</p>
@@ -79,7 +88,7 @@ function Exchange() {
                 </div>
                 <div className='coin'>
                   <div className='coin_name'>
-                    <p>코인4</p>
+                    <p>디센트럴랜드</p>
                   </div>
                   <div className='coin_price'>
                     <p>400,000,000</p>
