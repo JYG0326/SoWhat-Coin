@@ -29,7 +29,7 @@ function Header() {
         <ul className='function_interface'>
           <li><Link to="/Exchange">거래소</Link></li>
           <li>투자내역</li>
-          <li>코인동향</li>
+          <li><Link to="/News">코인동향</Link></li>
         </ul>
         <ul className='login_interface'>
           <button><li onClick={openLogin}>로그인</li></button>
