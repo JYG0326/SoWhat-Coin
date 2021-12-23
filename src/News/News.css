@@ -1,0 +1,15 @@
+.list_title{
+    float:left;
+    padding: 0px 25px 0px 25px;
+    font-weight: bold;
+}
+.writing_list> div{
+    width: 47.5%;
+    padding: 7.5px 15px 7.5px 15px;
+    border-bottom: 1px solid;
+    text-align: left;
+}
+.uptime{
+    font-size: 12.5px;
+    color: #a9a9a9;
+}
