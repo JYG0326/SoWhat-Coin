@@ -8,41 +8,41 @@ function Exchange() {
       <Header />
       <main>
         <div className='contentbox'>
+          {/*밑 코드는 후에 Api데이터로 대체*/}
           <div className='chart'>
-
-          </div>
-          <div className='askprice'>
-            <div className='listing_method'>
-              <button id="commonprice" className='method'>일반호가</button>
-              <button id="accumulateprice" className='method'>누적호가</button>
+            <div className='chart_header'>
+              <div className='chart_name'><h1>어쩔코인</h1></div>
+              <div className='chart_price'>
+                <h2 className='now_price'>100000 G-coin</h2>
+                <p className='change_price'>전일대비: +0.00% +0 G-coin</p>
+              </div>
             </div>
-          </div>
-          <div className='order'>
-            <div className='listing_method'>
-              <button id="buy" className='method'>매수</button>
-              <button id="sell" className='method'>매도</button>
+            <div className='chart_graph'>
+              <h1>대충 그래프</h1>
+              <p>아 암튼 그래프임</p>
             </div>
           </div>
           <div className='coinlist_container'>
             <div className='listing_method'>
-              <button id="yourcoin" className='method'>원화거래</button>
+              <button id="yourcoin" className='method'>코인목록</button>
               <button id="mycoin" className='method'>보유코인</button>
             </div>
-            <div className='coinlist'>
+            <div className='coin_list'>
               <div className='list_header'>
-                <div className='coin_name'>
+                <div className='list_name'>
                   <p>한글명</p>
                 </div>
-                <div className='coin_price'>
+                <div className='list_price'>
                   <p>현재가</p>
                 </div>
-                <div className='coin_change_price'>
+                <div className='list_change_price'>
                   <p>전일대비</p>
                 </div>
-                <div className='coin_volum'>
+                <div className='list_volum'>
                   <p>거래대금</p>
                 </div>
               </div>
+              {/*밑 코드는 후에 Api데이터로 대체*/}
               <div className='coins'>
                 <div className='coin'>
                   <div className='coin_name'>

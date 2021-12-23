@@ -1,44 +1,40 @@
 .contentbox{
     display: grid;
     width: 100%;
-    height: 1000px;
+    height: calc(80vh - 2px);
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     background-color: #e9ecf1;
 }
 
+
 .chart{
     grid-column:1 / span 2;
-    grid-row:1 / span 2;
-    margin:25px 50px 25px 50px;
+    margin:25px 0px 25px 75px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 4px 4px 8px rgb(0 0 0 / 12%);
 }
-.askprice{
-    grid-column:1 / span 1;
-    grid-row:3 / span 1;
-    margin:25px 25px 25px 50px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 4px 4px 8px rgb(0 0 0 / 12%);
+.chart_header{
+    text-align: left;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid;
 }
-.order{
-    grid-column:2 / span 1;
-    grid-row:3 / span 1;
-    margin:25px 50px 25px 25px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 4px 4px 8px rgb(0 0 0 / 12%);
+.chart_name{
+    float: left;
+    padding: 5px 25px 5px 25px;
 }
+.chart_price{
+}
+
 .coinlist_container{
     grid-column:3 / span 1;
-    grid-row:1 / span 3;
-    margin:25px 50px 25px 50px;
+    margin:25px 75px 25px 50px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 4px 4px 8px rgb(0 0 0 / 12%);
 }
+
+
 .listing_method{
     border-bottom: 1px solid #a9a9a9;
 }
@@ -49,6 +45,8 @@
     font-weight: bold;
     margin:15px 30px 15px 30px;
 }
+
+
 .list_header{
     display: flex;
     padding:10px 20px 10px 20px;
@@ -57,6 +55,20 @@
     text-align: center;
     color: #A9A9A9;
 }
+.list_name{
+    width:25%;
+}
+.list_price{
+    width:30%;
+}
+.list_change_price{
+    width:20%;
+}
+.list_volum{
+    width:25%;
+}
+
+
 .coin{
     display: flex;
     height:40px;
@@ -69,8 +81,6 @@
 }
 .coin_name{
     width:25%;
-}
-.coin > .coin_name{
     text-align: left;
 }
 .coin_price{
