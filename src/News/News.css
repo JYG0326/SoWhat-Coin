@@ -1,15 +1,49 @@
+textarea{
+    resize: none;
+}
+
+.N_contents1{
+    width: 50%;
+    float: left;
+}
+.N_contents1 > h2{
+    padding: 15px;
+}
+.writing_list> div{
+    padding: 7.5px 15px 7.5px 15px;
+    border-bottom: 1px solid;
+    text-align: left;
+}
 .list_title{
     float:left;
     padding: 0px 25px 0px 25px;
     font-weight: bold;
 }
-.writing_list> div{
-    width: 47.5%;
-    padding: 7.5px 15px 7.5px 15px;
-    border-bottom: 1px solid;
-    text-align: left;
-}
 .uptime{
     font-size: 12.5px;
     color: #a9a9a9;
+}
+.N_contents1 > p{
+    padding: 10px;
+    font-size: 12px;
+}
+.N_contents2{
+    width:50%;
+    float: right;
+}
+.N_contents2> h2{
+    padding: 15px 0px 15px 0px;
+}
+.input_title{
+    width:556.8px;
+    height: 25px;
+    border:1px solid;
+    border-bottom: 0px;
+    padding: 1px 5px 1px 5px;
+    margin: 10px 10px 0px 10px;
+}
+.input_text{
+    border:1px solid;
+    padding:5px;
+    margin: 0px 10px 10px 10px;
 }
