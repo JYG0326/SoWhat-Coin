@@ -37,7 +37,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
-    "proxy": "http://10.120.74.70:3000"
-  }
+    ]
+  },
+  "proxy": "http://10.120.74.70:3001"
 }
