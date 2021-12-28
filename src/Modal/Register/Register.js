@@ -45,6 +45,7 @@ class Register extends Component  {
   }
 
   render() {
+    const {closeRegister} = this.props;
     return createPortal(
       <div className='Modal_register'>
         <img alt='어쩔코인_로고' src='../logo.png' />
@@ -66,7 +67,7 @@ class Register extends Component  {
           <input className="popupinput" type="password" placeholder="비밀번호를 다시 입력하세요" />
         </div>
         <button className='btn submitbtn' onClick={this.handleJoin}>회원가입</button>
-        <button className="closebtn" >X</button>
+        <button className="closebtn" onClick={closeRegister}>X</button>
       </div>,
       document.getElementById("register")
     );
