@@ -35,6 +35,7 @@ class Login extends Component {
   }
 
   render() {
+    const {closeLogin} = this.props;
     return createPortal(
       <div className='Modal_login'>
         <img alt='어쩔코인_로고' src='../logo.png' />
@@ -48,7 +49,7 @@ class Login extends Component {
           <input className="popupinput" name="password" type="password" placeholder="비밀번호를 입력하세요" onChange={this.handleInput} />
         </div>
         <button className='btn submitbtn' onClick={this.handleJoin}>로그인</button>
-        <button className="closebtn">X</button>
+        <button className="closebtn" onClick={closeLogin} >X</button>
       </div>,
       document.getElementById("login")
     );
