@@ -9,6 +9,9 @@ textarea{
 .N_contents1 > h2{
     padding: 15px;
 }
+.writing_list{
+    padding: 0px 25px 0px 25px;
+}
 .writing_list> div{
     padding: 7.5px 15px 7.5px 15px;
     border-bottom: 1px solid;
