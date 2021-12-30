@@ -5,12 +5,13 @@ import React, { useState, useEffect } from "react";
 const socket = io.connect("http://10.120.74.70:3001");
 
 function App() {
-  const [chat, setChat] = useState([]);
+  const [data, setData] = useState(null)
 
 //받기
   useEffect(() => {
-    socket.on('msgToClient', (coinData) => {
-      console.log('return', coinData)
+    socket.on('msgToClient', (response) => {
+      console.log(response)
+      setData(response.data)
     })
   }, [])
 
@@ -21,11 +22,9 @@ function App() {
 
   //로드
   const renderChat = () => {
-    return chat.map(({ name, message }, index) => (
-      <div key={index}>
-        <h3>
-          {name}: <span>{message}</span>
-        </h3>
+    return data.map(data => (
+      <div key={data.id} >
+        <h3>{data.price}</h3>
       </div>
     ));
   };
@@ -38,6 +37,7 @@ function App() {
       <div className="render-chat">
         <h1>Log</h1>
         {renderChat()}
+        ))}
       </div> 
     </div>
   );
