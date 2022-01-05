@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://192.168.0.117:3001"
+  "proxy": "http://10.120.74.70:3001"
 }

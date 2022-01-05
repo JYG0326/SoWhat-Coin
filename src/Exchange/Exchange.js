@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import HighCharts from './High';
 
-const socket = io.connect("http://192.168.0.117:3001");
+const socket = io.connect("http://10.120.74.70:3001");
 
 function Exchange() {
 
