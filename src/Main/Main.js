@@ -30,7 +30,6 @@ function Main() {
           <p>Coins</p>
         </div>
         <button className='btn M_btn1' onClick={moveExchange}>거래소 둘러보기</button>
-        <button className='btn M_btn2' onClick={openLogin} >로그인</button>
         {loginShowing && <Login />}
         {loginShowing && <Login closeLogin={closeLogin} />}
       </main>
