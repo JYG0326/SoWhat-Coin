@@ -2,51 +2,79 @@ textarea{
     resize: none;
 }
 
-.N_contents1{
-    width: 50%;
+.N_contents{
+    width: 100%;
+    height: calc(100vh - 160px);
+    background-color: #e9ecf1;
+    overflow: auto;
+}
+.N_title{
+    box-sizing: border-box;
+    width: 60%;
+    height: 80px;
+    margin: 0px 20% 20px 20%;
+    border: 1px solid #a5a1a1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: white;
+}
+.N_title > h2{
+    line-height: 50px;
+}
+.N_title > p{
+    line-height: 20px;
+}
+
+.writebox{
+    box-sizing: border-box;
+    width:40%;
+    height: 200px;
+    border-radius: 10px;
+    padding: 1px;
+    margin:20px 5% 20px 5%;
+    background-color: white;
     float: left;
+    box-shadow: 4px 4px 8px rgb(0 0 0 / 12%);
 }
-.N_contents1 > h2{
-    padding: 15px;
+.writebox:hover{
+    padding: 0px;
+    border: 1px solid;
 }
-.writing_list{
-    padding: 0px 25px 0px 25px;
+
+.boxname{
+    box-sizing: border-box;
+    width:200px;
+    line-height: 200px;
+    font-size: 22px;
+    float: left;
+    border-right: 1px solid;
 }
-.writing_list> div{
-    padding: 7.5px 15px 7.5px 15px;
+
+.boxtitle{
+    box-sizing: border-box;
+    width: calc(90% - 200px);
+    height: 30px;
+    line-height: 30px;
     border-bottom: 1px solid;
-    text-align: left;
-}
-.list_title{
-    float:left;
-    padding: 0px 25px 0px 25px;
+    float: left;
+    font-size: 18px;
     font-weight: bold;
 }
-.uptime{
-    font-size: 12.5px;
-    color: #a9a9a9;
-}
-.N_contents1 > p{
-    padding: 10px;
-    font-size: 12px;
-}
-.N_contents2{
-    width:50%;
+.boxtime{
+    box-sizing: border-box;
+    width: 10%;
+    height: 30px;
+    line-height: 30px;
     float: right;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    font-size: 7.5px;
 }
-.N_contents2> h2{
-    padding: 15px 0px 15px 0px;
-}
-.input_title{
-    width:556.8px;
-    height: 25px;
-    border:1px solid;
-    border-bottom: 0px;
-    padding: 1px 5px 1px 5px;
-    margin: 0px 10px 0px 10px;
-}
-.input_text{
-    border:1px solid;
-    padding:5px;
-    margin: 0px 10px 10px 10px;
+.boxcontent{
+    box-sizing: border-box;
+    width: calc(100% - 200px);
+    height: 120px;
+    float: left;
+    padding: 10px;
+    text-align: left;
 }
