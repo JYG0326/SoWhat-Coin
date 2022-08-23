@@ -5,21 +5,21 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import HighCharts from './High';
 
-const socket = io.connect("http://10.120.74.70:3001");
+const socket = io.connect("http://210.111.218.36:3001");
 
 function Exchange() {
 
   const [data, setData] = useState([])
   const [chart, setChart] = useState([])
   const [title, setTitle] = useState('불러오는중...')
-  const [price, setPrice] = useState('불러오는중...')
-
+  const [price, setPrice] = useState('0')
+  const [change, setChange] = useState('0')
 
   useEffect(() => {
     socket.emit('msgToServer')
     socket.on('msgToClient', (response) => {
-      setChart(response.data)
-      console.log(response.data)
+    setChart(response.data)
+
     })
   }, [])
 
@@ -27,14 +27,13 @@ function Exchange() {
     socket.on('msgToClient', (response) => {
     setData([0])
     setData(response.data[num].chartdata)
-    console.log(response.data)
     setTitle(response.data[num].name)
     setPrice(response.data[num].price)
+    setChange(response.data[num].price-response.data[num].chartdata[27])
     e.preventDefault();
     })
   }
-
-
+  
   return (
     <div className="App">
       <Header />
@@ -45,7 +44,7 @@ function Exchange() {
               <div className='chart_name'><h1>{title}</h1></div>
               <div className='chart_price'>
                 <h2 className='now_price'>{price} G-coin</h2>
-                <p className='change_price'>전일대비: +0.00% +0 G-coin</p>
+                <p className='change_price'>실시간변동값: {change} G-coin</p>
               </div>
             </div>
             <div className='chart_graph'>
@@ -54,7 +53,7 @@ function Exchange() {
           </div>
           <div className='coinlist_container'>
             <div className='listing_method'>
-              <button id="yourcoin" className='method'>코인목록</button>
+              <p id="yourcoin" className='method'>코인목록</p>
             </div>
             <div className='coin_list'>
               <div className='list_header'>
@@ -65,7 +64,7 @@ function Exchange() {
                   <p>현재가</p>
                 </div>
                 <div className='list_change_price'>
-                  <p>전일대비</p>
+                  <p>변동값</p>
                 </div>
                 <div className='list_volum'>
                   <p>거래대금</p>
@@ -74,9 +73,9 @@ function Exchange() {
               <div className='coins'>
                 {chart.map((data, index) => (
                   <div key={index} className="coin">
-                    <div className="coin_name" value={data.id} onClick={(e)=>{clickHandler(data.id-1, e)}}>
+                    <button className="coin_name" value={data.id} onClick={(e)=>{clickHandler(data.id-1, e)}}>
                       <p>{data.name}</p>
-                    </div>
+                    </button>
                     <div className="coin_price">
                       <p>{data.price}</p>
                     </div>
@@ -84,7 +83,7 @@ function Exchange() {
                       <p>준비중..</p>
                     </div>
                     <div className='coin_volum'>
-                      <p>준비중..</p>
+                      <p>비활성화</p>
                     </div>
                   </div>
                 ))}
