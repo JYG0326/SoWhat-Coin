@@ -1,7 +1,7 @@
 .contentbox{
     display: grid;
     width: 100%;
-    height: calc(80vh - 2px);
+    height: calc(100vh - 160px);
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #e9ecf1;
 }
@@ -14,6 +14,9 @@
     background-color: white;
     box-shadow: 4px 4px 8px rgb(0 0 0 / 12%);
 }
+.chart_graph{
+    padding-top:150px;
+}
 .chart_header{
     text-align: left;
     padding: 10px 0px 10px 0px;
@@ -24,6 +27,7 @@
     padding: 5px 25px 5px 25px;
 }
 .chart_price{
+
 }
 .chart_graph>h1{
     line-height: 400px;
@@ -39,24 +43,31 @@
 
 
 .listing_method{
+    box-sizing: border-box;
     border-bottom: 1px solid #a9a9a9;
+    height: 55px;
 }
 .method{
     background-color: white;
     border: 0px;
     font-size: 18px;
+    line-height: 55px;
     font-weight: bold;
-    margin:15px 30px 15px 30px;
+    height: 54px;
 }
 
 
 .list_header{
+    box-sizing: border-box;
     display: flex;
-    padding:10px 20px 10px 20px;
+    padding:0px 20px 0px 20px;
     flex-direction: row;
     font-size: 13px;
     text-align: center;
     color: #A9A9A9;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #a9a9a9;
 }
 .list_name{
     width:25%;
@@ -73,7 +84,7 @@
 
 .coins{
     overflow-y: scroll;
-    height:450px;
+    height: calc(100vh - 305px);
 }
 .coin{
     display: flex;
@@ -88,13 +99,21 @@
 .coin_name{
     width:27.5%;
     text-align: left;
+    background-color: white;
+    border: 0px;
+    text-align: center;
 }
 .coin_price{
     width:27.5%;
+    text-align: center;
 }
 .coin_change_price{
+    box-sizing: border-box;
     width:20%;
+    padding-right: 7.5px;
 }
 .coin_volum{
+    box-sizing: border-box;
     width:25%;
+    padding-right: 15px;
 }
