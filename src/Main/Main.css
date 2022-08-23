@@ -4,16 +4,18 @@
     padding:0;
 }
 .App{
-    min-width: 1440px;
-    min-height: 700px;
+    min-width: 1170px;
+    min-height: 585px;
 }
 main{
-    min-height: calc(80vh - 2px);
-    padding-top: 10vh;
+    min-height: calc(100vh - 160px);
+    padding-top: 80px;
     text-align: center;
 }
 main>img{
-    width:100%;
+    width: 100%;
+    height: calc(100vh - 164px);
+    opacity: 0.2;
 }
 main>.textbox{
     width: 60%;
@@ -38,7 +40,8 @@ main>.textbox{
 .bold{
     font-weight: bold;
 }
-.btn{
+.M_btn{
+    box-sizing: border-box;
     width:150px;
     height: 50px;
     font-size: 16px;
@@ -46,14 +49,23 @@ main>.textbox{
     color: white;
     background-color: #0062DF;
     border: 0px;
-}
-.M_btn1{
     position:absolute;
-    top:65%;
-    left:45%;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
 }
-.M_btn2{
-    position:absolute;
-    top:65%;
-    right:40%;
+.M_btn:hover{
+    background-color: white;
+    color: #0062DF;
+    border:1px solid #0062DF;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
 }
