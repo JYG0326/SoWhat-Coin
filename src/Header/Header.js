@@ -1,42 +1,33 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 import './Header.css';
-import Login from "../Modal/Login/Login";
-import Register from "../Modal/Register/Register";
+import Code from "../Modal/QR/Code";
 
 function Header() {
-    const moveMain = () => {
+  const moveMain = () => {
     window.location.href = "/";
   };
-  const [loginShowing, setLoginShowing] = useState(false);
-  const openLogin = () => {
-    setLoginShowing(true);
+  const [codeShowing, setCodeShowing] = useState(false);
+  const openCode = () => {
+    setCodeShowing(true);
   };
-  const closeLogin=() => {
-    setLoginShowing(false);
+  const closeCode=() => {
+    setCodeShowing(false);
   };
-  const [registerShowing, setRegisterShowing] = useState(false);
-  const openRegister = () => {
-    setRegisterShowing(true);
-  };
-  const closeRegister=() => {
-    setRegisterShowing(false);
-  };
+
   return (
     <header>
       <nav className='H_nav'>
-        <div className='logo_interface'><img alt='어쩔코인_로고' src="./logo.png" onClick={moveMain} /></div>
+        <div className='logo_interface'><img alt='어쩔코인_로고' src="./logo.png" className='logo' onClick={moveMain} /></div>
         <ul className='function_interface'>
-          <li><Link to="/Exchange">거래소</Link></li>
-          <li><Link to="/News">코인동향</Link></li>
+          <Link to="/Exchange"><li class='link exchange'>거래소</li></Link>
+          <Link to="/News"><li class='link news'>코인동향</li></Link>
         </ul>
+        <div className='link_download' onClick={openCode}>QR코드 다운로드</div>
       </nav>
-      {loginShowing && <Login />}
-      {loginShowing && <Login closeLogin={closeLogin} />}
-      {registerShowing && <Register />}
-      {registerShowing && <Register closeRegister={closeRegister} />}
+      {codeShowing && <Code />}
+      {codeShowing && <Code closeCode={closeCode} />}
     </header>
-    
   );
 }
 
