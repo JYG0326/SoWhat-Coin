@@ -2,16 +2,8 @@ import { useState } from "react";
 import './Main.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Login from "../Modal/Login/Login";
 
 function Main() {
-  const [loginShowing, setLoginShowing] = useState(false);
-  const openLogin = () => {
-    setLoginShowing(true);
-  };
-  const closeLogin=() => {
-    setLoginShowing(false);
-  };
   const moveExchange = () => {
     window.location.href = "/Exchange";
   };
@@ -25,13 +17,11 @@ function Main() {
           <p>안전하고 투명한 시스템으로 빠르고 정확한 정보들을 제공합니다</p>
         </div>
         <div className='nowcoins'>
-          <p className='bold'>현제 코인 수량</p>
-          <h1>0</h1>
+          <p className='bold'>현재 코인 수량</p>
+          <h1>10</h1>
           <p>Coins</p>
         </div>
-        <button className='btn M_btn1' onClick={moveExchange}>거래소 둘러보기</button>
-        {loginShowing && <Login />}
-        {loginShowing && <Login closeLogin={closeLogin} />}
+        <button className='M_btn' onClick={moveExchange}>거래소 둘러보기</button>
       </main>
       <Footer />
     </div>
